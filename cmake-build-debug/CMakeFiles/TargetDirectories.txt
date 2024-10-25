@@ -1,0 +1,3 @@
+C:/Users/Geiss/Desktop/git/test/Buchungssystem_on_git/cmake-build-debug/CMakeFiles/Buchungssystem_on_git.dir
+C:/Users/Geiss/Desktop/git/test/Buchungssystem_on_git/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Geiss/Desktop/git/test/Buchungssystem_on_git/cmake-build-debug/CMakeFiles/rebuild_cache.dir
