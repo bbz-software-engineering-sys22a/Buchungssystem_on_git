@@ -3,6 +3,8 @@
 
 using namespace std;
 
+//geänderte Version 2
+
 class Person {
 public:
     Person() {}
