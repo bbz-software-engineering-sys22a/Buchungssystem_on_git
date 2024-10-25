@@ -1,6 +1,6 @@
 #include <iostream>
 #include <list>
-
+//aenderung
 using namespace std;
 
 class Person {
