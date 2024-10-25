@@ -15,7 +15,7 @@ public:
         anzahlKunden_++;
         //test comment
     }
-
+//Okan's Kommentar
     Person(string mail) {
         vorname_ = "gast";
         nachname_ = "gast";
