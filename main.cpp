@@ -3,6 +3,7 @@
 
 using namespace std;
 
+// Klassenerstellung
 class Person {
 public:
     Person() {}
@@ -53,6 +54,8 @@ int Person::getAnzahlKunden() {
     return anzahlKunden_;
 }
 
+//Funktion Begruessung
+
 void begruessung();
 
 Person registrierungNeukunde();
@@ -67,15 +70,19 @@ enum Registrierung {
     kunde = 1, gast = 2
 };
 
+// Main Programm
+
 int main() {
 
 
     // inizialisierung von den Variabel
+
     int inStockComputer = 50;
     int registrierungsArt;
     Registrierung registrierung;
     list<Person> personenListe;
 
+    //Unendliche Schleife
 
     while (true) {
         begruessung(); // in dieser schleife werden alle noten abgefragt und zusammengez�hlt
@@ -89,30 +96,18 @@ int main() {
 
         Person person;
         switch (registrierung) {
-        case kunde:
-            person = registrierungNeukunde();
-            personenListe.push_back(person);
-            break;
-        case gast:
-            person = registrierungGast();
-            personenListe.push_back(person);
-            break;
-        default:
-            cout << "Dies war keine gueltige Eingabe, bitte beginnen Sie erneut!";
-            return 0;
+            case kunde:
+                person = registrierungNeukunde();
+                personenListe.push_back(person);
+                break;
+            case gast:
+                person = registrierungGast();
+                personenListe.push_back(person);
+                break;
+            default:
+                cout << "Dies war keine gueltige Eingabe, bitte beginnen Sie erneut!";
+                return 0;
         }
-        /*
-        if (person) {
-            person = registrierungNeukunde();
-            personenListe.push_back(person);
-        } else if (registrierungsArt == 2) {
-            person = registrierungGast();
-            personenListe.push_back(person);
-        } else {
-            cout << "Dies war keine gueltige Eingabe, bitte beginnen Sie erneut!";
-            return 0;
-        }*/
-
 
         bestaetigungRegistrierung(person);
 
@@ -134,12 +129,16 @@ int main() {
     return 0;
 }
 
+// Funktion Begruessung
+
 void begruessung() {
     cout << "###################################################" << endl;
     cout << "#_______________Online-Shop_______________________#" << endl;
     cout << "###################################################" << endl;
     cout << "Wilkommen in unserem Online-Shop" << endl;
 }
+
+// Hier werden die Kunden registiert
 
 Person registrierungNeukunde() {
     string vorname;
@@ -161,6 +160,8 @@ Person registrierungNeukunde() {
     return kunde;
 }
 
+// Hier werden die Gaeste registiert
+
 Person registrierungGast() {
     string mail;
 
@@ -172,9 +173,13 @@ Person registrierungGast() {
     return kunde;
 }
 
+// Funktion Bestaetigung
+
 void bestaetigungRegistrierung(Person kunde) {
     cout << "Vielen Dank fuer die Registrierung " << kunde.getVorname() << endl;
 }
+
+// Funktion listeAnzeigen
 
 void listeAnzeigen(list<Person> person) {
     list<Person>::iterator it;
