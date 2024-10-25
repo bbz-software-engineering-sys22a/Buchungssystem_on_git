@@ -69,6 +69,7 @@ enum Registrierung {
 
 int main() {
 
+    // Dies ist ein Test-Kommentar für den neuen Branch
 
     // inizialisierung von den Variabel
     int inStockComputer = 50;
